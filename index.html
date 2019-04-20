@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="battleship.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/android-chrome-512x512.png">
+    <title>Multiplication Battleship</title>
+</head>
+<body>
+    <div id="opponent-grid">
+        <h1 id="title">Multiplication Battleship!</h1>
+        <button id="start" onClick="startGame()">Start Game</button>
+        <table id="opponent">
+          <tr>
+            <th>X</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+            <th>6</th>
+            <th>7</th>
+            <th>8</th>
+            <th>9</th>
+            <th>10</th>
+            <th>11</th>
+            <th>12</th>
+          </tr>
+          <tr>
+            <th>1</th>
+            <td class="opponent-grid" id="1-1"><div></div></td>
+            <td class="opponent-grid" id="2-1"><div></div></td>
+            <td class="opponent-grid" id="3-1"><div></div></td>
+            <td class="opponent-grid" id="4-1"><div></div></td>
+            <td class="opponent-grid" id="5-1"><div></div></td>
+            <td class="opponent-grid" id="6-1"><div></div></td>
+            <td class="opponent-grid" id="7-1"><div></div></td>
+            <td class="opponent-grid" id="8-1"><div></div></td>
+            <td class="opponent-grid" id="9-1"><div></div></td>
+            <td class="opponent-grid" id="10-1"><div></div></td>
+            <td class="opponent-grid" id="11-1"><div></div></td>
+            <td class="opponent-grid" id="12-1"><div></div></td>
+          </tr>
+          <th>2</th>
+            <td class="opponent-grid" id="1-2"><div></div></td>
+            <td class="opponent-grid" id="2-2"><div></div></td>
+            <td class="opponent-grid" id="3-2"><div></div></td>
+            <td class="opponent-grid" id="4-2"><div></div></td>
+            <td class="opponent-grid" id="5-2"><div></div></td>
+            <td class="opponent-grid" id="6-2"><div></div></td>
+            <td class="opponent-grid" id="7-2"><div></div></td>
+            <td class="opponent-grid" id="8-2"><div></div></td>
+            <td class="opponent-grid" id="9-2"><div></div></td>
+            <td class="opponent-grid" id="10-2"><div></div></td>
+            <td class="opponent-grid" id="11-2"><div></div></td>
+            <td class="opponent-grid" id="12-2"><div></div></td>
+          </tr>
+        <th>3</th>
+            <td class="opponent-grid" id="1-3"><div></div></td>
+            <td class="opponent-grid" id="2-3"><div></div></td>
+            <td class="opponent-grid" id="3-3"><div></div></td>
+            <td class="opponent-grid" id="4-3"><div></div></td>
+            <td class="opponent-grid" id="5-3"><div></div></td>
+            <td class="opponent-grid" id="6-3"><div></div></td>
+            <td class="opponent-grid" id="7-3"><div></div></td>
+            <td class="opponent-grid" id="8-3"><div></div></td>
+            <td class="opponent-grid" id="9-3"><div></div></td>
+            <td class="opponent-grid" id="10-3"><div></div></td>
+            <td class="opponent-grid" id="11-3"><div></div></td>
+            <td class="opponent-grid" id="12-3"><div></div></td>
+          </tr>
+        <th>4</th>
+            <td class="opponent-grid" id="1-4"><div></div></td>
+            <td class="opponent-grid" id="2-4"><div></div></td>
+            <td class="opponent-grid" id="3-4"><div></div></td>
+            <td class="opponent-grid" id="4-4"><div></div></td>
+            <td class="opponent-grid" id="5-4"><div></div></td>
+            <td class="opponent-grid" id="6-4"><div></div></td>
+            <td class="opponent-grid" id="7-4"><div></div></td>
+            <td class="opponent-grid" id="8-4"><div></div></td>
+            <td class="opponent-grid" id="9-4"><div></div></td>
+            <td class="opponent-grid" id="10-4"><div></div></td>
+            <td class="opponent-grid" id="11-4"><div></div></td>
+            <td class="opponent-grid" id="12-4"><div></div></td>
+          </tr>
+        <th>5</th>
+            <td class="opponent-grid" id="1-5"><div></div></td>
+            <td class="opponent-grid" id="2-5"><div></div></td>
+            <td class="opponent-grid" id="3-5"><div></div></td>
+            <td class="opponent-grid" id="4-5"><div></div></td>
+            <td class="opponent-grid" id="5-5"><div></div></td>
+            <td class="opponent-grid" id="6-5"><div></div></td>
+            <td class="opponent-grid" id="7-5"><div></div></td>
+            <td class="opponent-grid" id="8-5"><div></div></td>
+            <td class="opponent-grid" id="9-5"><div></div></td>
+            <td class="opponent-grid" id="10-5"><div></div></td>
+            <td class="opponent-grid" id="11-5"><div></div></td>
+            <td class="opponent-grid" id="12-5"><div></div></td>
+          </tr>
+        <th>6</th>
+            <td class="opponent-grid" id="1-6"><div></div></td>
+            <td class="opponent-grid" id="2-6"><div></div></td>
+            <td class="opponent-grid" id="3-6"><div></div></td>
+            <td class="opponent-grid" id="4-6"><div></div></td>
+            <td class="opponent-grid" id="5-6"><div></div></td>
+            <td class="opponent-grid" id="6-6"><div></div></td>
+            <td class="opponent-grid" id="7-6"><div></div></td>
+            <td class="opponent-grid" id="8-6"><div></div></td>
+            <td class="opponent-grid" id="9-6"><div></div></td>
+            <td class="opponent-grid" id="10-6"><div></div></td>
+            <td class="opponent-grid" id="11-6"><div></div></td>
+            <td class="opponent-grid" id="12-6"><div></div></td>
+          </tr>
+        <th>7</th>
+            <td class="opponent-grid" id="1-7"><div></div></td>
+            <td class="opponent-grid" id="2-7"><div></div></td>
+            <td class="opponent-grid" id="3-7"><div></div></td>
+            <td class="opponent-grid" id="4-7"><div></div></td>
+            <td class="opponent-grid" id="5-7"><div></div></td>
+            <td class="opponent-grid" id="6-7"><div></div></td>
+            <td class="opponent-grid" id="7-7"><div></div></td>
+            <td class="opponent-grid" id="8-7"><div></div></td>
+            <td class="opponent-grid" id="9-7"><div></div></td>
+            <td class="opponent-grid" id="10-7"><div></div></td>
+            <td class="opponent-grid" id="11-7"><div></div></td>
+            <td class="opponent-grid" id="12-7"><div></div></td>
+          </tr>
+        <th>8</th>
+            <td class="opponent-grid" id="1-8"><div></div></td>
+            <td class="opponent-grid" id="2-8"><div></div></td>
+            <td class="opponent-grid" id="3-8"><div></div></td>
+            <td class="opponent-grid" id="4-8"><div></div></td>
+            <td class="opponent-grid" id="5-8"><div></div></td>
+            <td class="opponent-grid" id="6-8"><div></div></td>
+            <td class="opponent-grid" id="7-8"><div></div></td>
+            <td class="opponent-grid" id="8-8"><div></div></td>
+            <td class="opponent-grid" id="9-8"><div></div></td>
+            <td class="opponent-grid" id="10-8"><div></div></td>
+            <td class="opponent-grid" id="11-8"><div></div></td>
+            <td class="opponent-grid" id="12-8"><div></div></td>
+          </tr>
+        <th>9</th>
+            <td class="opponent-grid" id="1-9"><div></div></td>
+            <td class="opponent-grid" id="2-9"><div></div></td>
+            <td class="opponent-grid" id="3-9"><div></div></td>
+            <td class="opponent-grid" id="4-9"><div></div></td>
+            <td class="opponent-grid" id="5-9"><div></div></td>
+            <td class="opponent-grid" id="6-9"><div></div></td>
+            <td class="opponent-grid" id="7-9"><div></div></td>
+            <td class="opponent-grid" id="8-9"><div></div></td>
+            <td class="opponent-grid" id="9-9"><div></div></td>
+            <td class="opponent-grid" id="10-9"><div></div></td>
+            <td class="opponent-grid" id="11-9"><div></div></td>
+            <td class="opponent-grid" id="12-9"><div></div></td>
+          </tr>
+        <th>10</th>
+            <td class="opponent-grid" id="1-10"><div></div></td>
+            <td class="opponent-grid" id="2-10"><div></div></td>
+            <td class="opponent-grid" id="3-10"><div></div></td>
+            <td class="opponent-grid" id="4-10"><div></div></td>
+            <td class="opponent-grid" id="5-10"><div></div></td>
+            <td class="opponent-grid" id="6-10"><div></div></td>
+            <td class="opponent-grid" id="7-10"><div></div></td>
+            <td class="opponent-grid" id="8-10"><div></div></td>
+            <td class="opponent-grid" id="9-10"><div></div></td>
+            <td class="opponent-grid" id="10-10"><div></div></td>
+            <td class="opponent-grid" id="11-10"><div></div></td>
+            <td class="opponent-grid" id="12-10"><div></div></td>
+          </tr>
+        <th>11</th>
+            <td class="opponent-grid" id="1-11"><div></div></td>
+            <td class="opponent-grid" id="2-11"><div></div></td>
+            <td class="opponent-grid" id="3-11"><div></div></td>
+            <td class="opponent-grid" id="4-11"><div></div></td>
+            <td class="opponent-grid" id="5-11"><div></div></td>
+            <td class="opponent-grid" id="6-11"><div></div></td>
+            <td class="opponent-grid" id="7-11"><div></div></td>
+            <td class="opponent-grid" id="8-11"><div></div></td>
+            <td class="opponent-grid" id="9-11"><div></div></td>
+            <td class="opponent-grid" id="10-11"><div></div></td>
+            <td class="opponent-grid" id="11-11"><div></div></td>
+            <td class="opponent-grid" id="12-11"><div></div></td>
+          </tr>
+        <th>12</th>
+            <td class="opponent-grid" id="1-12"><div></div></td>
+            <td class="opponent-grid" id="2-12"><div></div></td>
+            <td class="opponent-grid" id="3-12"><div></div></td>
+            <td class="opponent-grid" id="4-12"><div></div></td>
+            <td class="opponent-grid" id="5-12"><div></div></td>
+            <td class="opponent-grid" id="6-12"><div></div></td>
+            <td class="opponent-grid" id="7-12"><div></div></td>
+            <td class="opponent-grid" id="8-12"><div></div></td>
+            <td class="opponent-grid" id="9-12"><div></div></td>
+            <td class="opponent-grid" id="10-12"><div></div></td>
+            <td class="opponent-grid" id="11-12"><div></div></td>
+            <td class="opponent-grid" id="12-12"><div></div></td>
+          </tr>
+        </table>
+      </div>
+      <div id="equation-col">
+        <label id="equation">? x ?</label>
+        <form id="user-input">
+          <input type="text" id="answer">
+          <button type="submit" value="Check Answer" id="submit-answer">Check Answer</button>
+        </form>
+        <div id="wrong-answer">Try Again</div>
+        <table id="legend">
+          <tr>
+            <th>Battleship</th>
+            <td id="bs"></td>
+          </tr>
+          <tr>
+            <th>Aircraft Carrier</th>
+            <td id="acc"></td>
+          </tr>
+          <tr>
+            <th>Destroyer</th>
+            <td id="des"></td>
+          </tr>
+          <tr>
+            <th>Patrol</th>
+            <td id="patrol"></td>
+          </tr>
+          <tr>
+            <th>Sub</th>
+            <td id="sub"></td>
+          </tr>
+        </table>
+        <div id="faq">
+          <h2 id="faq-head">How To Play</h2>
+          <p>
+            The objective is to sink all of the opponents boats by correctly answering
+            multiplication facts.
+          </p>
+          <ol>
+            <li>Click Start</li>
+            <li>Click on any of the Multiplication Battleship squares (e.g. square 5,5)</li>
+            <li>Enter the correct answer and click enter or hit the return key on your keyboard.</li>
+            <li>If the answer is correct and the opponents boat occupys that spot, the square will show a red dot. 
+                If the answer is correct but no opponent boat is at that location the square will be marked with a white dot.
+                If the answer is incorrect, you will see 'Try Again'.
+            </li>
+            <li>Once you have sunk a boat you will see 'SUNK' next to the name of the boat you have sunk.</li>
+            <li>You win once all boats are sunk</li>
+          </ol>
+        </div>
+      </div>
+      <div id="winner">
+        <h1>YOU WIN!!!</h1>
+      </div>
+      
+<script src="battleship.js"></script>
+</body>
+</html>
