@@ -13,7 +13,7 @@ I thought it would be fun to turn it into a web version using vanilla JavaScript
 
 # How to play
 
-![Battleship Grid](MB.png)
+![Battleship Grid](./images/MB.png)
 
 1. Click Start
 2. Click on any of the Multiplication Battleship squares (e.g. square 5,5)
